@@ -13,6 +13,7 @@ function genSidebar(t: string) {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/dictionary/",
   title: "My Dictionary",
   description: "My Dictionary Site",
   srcDir: "src",
