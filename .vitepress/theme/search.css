@@ -1,0 +1,91 @@
+.result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  transition: none;
+  line-height: 1rem;
+  border: solid 2px var(--vp-local-search-result-border);
+  outline: none;
+}
+
+.result:hover {
+  --vp-local-search-result-bg: var(--vp-local-search-result-selected-bg);
+  border-color: var(--vp-local-search-result-selected-border);
+}
+
+.result > div {
+  margin: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .result > div {
+    margin: 8px;
+  }
+}
+
+.titles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  position: relative;
+  z-index: 1001;
+  padding: 2px 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.title.main {
+  font-weight: 500;
+}
+
+.title-icon {
+  opacity: 0.5;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+}
+
+.title svg {
+  opacity: 0.5;
+}
+
+.result.selected .excerpt {
+  opacity: 1;
+}
+
+.excerpt :deep(*) {
+  font-size: 0.8rem !important;
+  line-height: 130% !important;
+}
+
+.titles :deep(mark),
+.excerpt :deep(mark) {
+  background-color: var(--vp-local-search-highlight-bg);
+  color: var(--vp-local-search-highlight-text);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.excerpt :deep(.vp-code-group) .tabs {
+  display: none;
+}
+
+.excerpt :deep(.vp-code-group) div[class*="language-"] {
+  border-radius: 8px !important;
+}
+
+.no-results {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 12px;
+}
+
+.search-actions {
+  display: none !important;
+}
