@@ -91,5 +91,5 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
     ],
   },
-  head: [["script", { async: "", src: "/search.js" }]],
+  head: [["script", { async: "", src: "/dictionary/search.js" }]],
 });

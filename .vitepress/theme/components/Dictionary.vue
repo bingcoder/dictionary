@@ -18,7 +18,7 @@ const data = ref();
 const dictionary = catalogue.find((item) => item.url === params.value.dict);
 
 onMounted(() => {
-  fetch(`/dicts/${params.value.dict}.json`)
+  fetch(`/dictionary/dicts/${params.value.dict}.json`)
     .then((res) => res.json())
     .then((res) => {
       data.value = res;
