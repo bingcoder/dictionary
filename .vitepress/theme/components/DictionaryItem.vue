@@ -51,7 +51,7 @@ const props = defineProps(["source"]);
 
 function play(word, type = 0) {
   const audio = new Audio(
-    `http://dict.youdao.com/dictvoice?type${type}&audio=${word}`
+    `http://dict.youdao.com/dictvoice?type=${type}&audio=${word}`
   );
   audio.play();
 }
